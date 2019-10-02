@@ -8,6 +8,9 @@
     <color name="colorPrimaryText">#f0b71c</color>
     <color name="whiteText">#fff</color>
 
+    <color name="acceptBtn">#3aba13</color>
+    <color name="rejectBtn">#c61b1b</color>
+
     <!-- Screens background color-->
     <color name="bg_screen1">#f0b71c</color>
     <color name="bg_screen2">#e62e2e</color>

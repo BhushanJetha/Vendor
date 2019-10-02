@@ -27,7 +27,8 @@
         <activity android:name=".vendor_detail.ServiceDetailActivity" />
         <activity android:name=".vendor_detail.BikeListActivity" />
         <activity android:name=".servicing_request.RequestDetailActivity" />
-        <activity android:name=".mobileVerification.MobileVerificationActivity"></activity>
+        <activity android:name=".mobileVerification.MobileVerificationActivity" />
+        <activity android:name=".request_detail.RequestDetailActivity"></activity>
     </application>
 
 </manifest>

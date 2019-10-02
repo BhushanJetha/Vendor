@@ -1,5 +1,6 @@
 package vendor.greasemonkey.drabstech.com.greasemonkeyvendor;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,8 +11,10 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.request_detail.RequestDetailActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.request_detail.RequestListAdapter;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.request_detail.RequestModel;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.utility.recyclerview_click_handler.RecyclerTouchListener;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -40,6 +43,21 @@ public class HomeActivity extends AppCompatActivity {
             LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
             mRecyclerView.setLayoutManager(llm);
         }
+
+        mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), mRecyclerView, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+
+                Intent i=new Intent(HomeActivity.this,RequestDetailActivity.class);
+                startActivity(i);
+                finish();
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
     }
 
     public void setToolbar(){
@@ -47,10 +65,10 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Grease Monkey");
 
-        if (getSupportActionBar() != null) {
+       /* if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
-        }
+        }*/
     }
 
     private void requestList(){
