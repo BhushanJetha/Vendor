@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">GreaseMonkey Partners</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Pick up - Drop!</string>
+    <string name="slide_1_desc">Schedule free door step pick up - drop at your convenience and get RS 200 cash back on first booking.</string>
+
+    <string name="slide_2_title">Annual Maintenance</string>
+    <string name="slide_2_desc">Choose our Gold/Silver membership and save up to 75% on your annual maintenance</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Now help is at your ﬁnger tips  Book emergency services any time any where.</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <string-array name="services">
+        <item>General Service</item>
+        <item>Towing Service</item>
+        <item>Pick up Drop</item>
+        <item>Road side On spot service </item>
+        <item>Mechanical Break Down Assistance</item>
+        <item>Bike Key replacement</item>
+    </string-array>
+
+    <string-array name="manufacturer">
+        <item>Bajaj</item>
+        <item>Hero</item>
+        <item>Honda</item>
+        <item>Mahindra</item>
+        <item>Suzuki</item>
+        <item>TVS</item>
+        <item>Yamaha</item>
+        <item>Aprilia</item>
+        <item>Kinetic</item>
+        <item>PIAGGIO</item>
+        <item>Royal Enfield</item>
+        <item>YEZDI</item>
+    </string-array>
+</resources>
