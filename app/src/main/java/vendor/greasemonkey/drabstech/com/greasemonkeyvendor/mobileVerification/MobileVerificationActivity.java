@@ -8,23 +8,22 @@ import android.widget.Button;
 
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.registration.RegistrationActivity;
-import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.vendor_detail.RegisterAddressActivity;
 
-public class OTPVerificationActivity extends AppCompatActivity {
+public class MobileVerificationActivity extends AppCompatActivity {
 
-    private Button btnVerify;
+    private Button btnGetOTP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_otpverification);
+        setContentView(R.layout.activity_mobile_verification);
 
-        btnVerify = (Button)findViewById(R.id.btnVerify);
+        btnGetOTP =(Button)findViewById(R.id.btnGetOTP);
 
-        btnVerify.setOnClickListener(new View.OnClickListener() {
+        btnGetOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(OTPVerificationActivity.this,  RegistrationActivity.class);
+                Intent i = new Intent(MobileVerificationActivity.this, OTPVerificationActivity.class);
                 startActivity(i);
 
                 // close this activity

@@ -9,6 +9,7 @@ import android.widget.Button;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.login.LoginActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.mobileVerification.OTPVerificationActivity;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.vendor_detail.RegisterAddressActivity;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class RegistrationActivity extends AppCompatActivity {
         btnRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(RegistrationActivity.this, OTPVerificationActivity.class);
+                Intent i = new Intent(RegistrationActivity.this, RegisterAddressActivity.class);
                 startActivity(i);
 
                 // close this activity

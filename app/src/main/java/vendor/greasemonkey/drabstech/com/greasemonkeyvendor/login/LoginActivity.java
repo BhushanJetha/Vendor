@@ -19,6 +19,7 @@ import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.HomeActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.SplashActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.helpscreen.WelcomeActivity;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.mobileVerification.MobileVerificationActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.registration.RegistrationActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -49,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         registartionLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(LoginActivity.this, RegistrationActivity.class);
+                Intent i = new Intent(LoginActivity.this, MobileVerificationActivity.class);
                 startActivity(i);
 
                 // close this activity
