@@ -44,4 +44,19 @@
         <item>Royal Enfield</item>
         <item>YEZDI</item>
     </string-array>
+
+    <string-array name="request_status">
+        <item>WIP</item>
+        <item>Pending for Approval</item>
+        <item>Complete</item>
+    </string-array>
+
+    <string name="title_shop">Home</string>
+    <string name="title_gifts">Profile</string>
+    <string name="title_cart">Account</string>
+    <string name="title_profile">Notification</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_base">BaseActivity</string>
 </resources>

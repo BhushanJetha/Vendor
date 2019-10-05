@@ -5,11 +5,12 @@
     <color name="colorAccent">#29abe2</color>
 
 
+    <color name="bgBottomNavigation">#fff</color>
     <color name="colorPrimaryText">#f0b71c</color>
     <color name="whiteText">#fff</color>
 
-    <color name="acceptBtn">#3aba13</color>
-    <color name="rejectBtn">#c61b1b</color>
+    <color name="acceptBtn">#45992b</color>
+    <color name="rejectBtn">#d72f2f</color>
 
     <!-- Screens background color-->
     <color name="bg_screen1">#f0b71c</color>

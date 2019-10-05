@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.BaseActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 import android.view.View.OnClickListener;
 import android.content.Intent;
@@ -17,7 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-public class ServiceDetailActivity extends AppCompatActivity implements OnClickListener{
+public class ServiceDetailActivity extends BaseActivity implements OnClickListener{
 
     private Button button;
     private ListView listView;
@@ -76,8 +77,6 @@ public class ServiceDetailActivity extends AppCompatActivity implements OnClickL
         Intent i = new Intent(ServiceDetailActivity.this,  BikeListActivity.class);
         startActivity(i);
 
-        // close this activity
-        finish();
 
        /* Intent intent = new Intent(getApplicationContext(),
                 ResultActivity.class);

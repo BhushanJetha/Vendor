@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.BaseActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.registration.RegistrationActivity;
 
-public class MobileVerificationActivity extends AppCompatActivity {
+public class MobileVerificationActivity extends BaseActivity {
 
     private Button btnGetOTP;
 
@@ -25,9 +26,6 @@ public class MobileVerificationActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MobileVerificationActivity.this, OTPVerificationActivity.class);
                 startActivity(i);
-
-                // close this activity
-                finish();
             }
         });
     }

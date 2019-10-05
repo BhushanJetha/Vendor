@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.BaseActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.mobileVerification.OTPVerificationActivity;
 
-public class RegisterAddressActivity extends AppCompatActivity {
+public class RegisterAddressActivity extends BaseActivity {
 
     private Button btnNext;
 
@@ -26,8 +27,6 @@ public class RegisterAddressActivity extends AppCompatActivity {
                 Intent i = new Intent(RegisterAddressActivity.this,  ServiceDetailActivity.class);
                 startActivity(i);
 
-                // close this activity
-                finish();
             }
         });
     }

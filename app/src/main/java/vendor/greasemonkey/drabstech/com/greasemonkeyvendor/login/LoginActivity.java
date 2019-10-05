@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.DashobardActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.HomeActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.SplashActivity;
@@ -39,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                Intent i = new Intent(LoginActivity.this, DashobardActivity.class);
                 startActivity(i);
 
                 // close this activity
@@ -52,9 +53,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(LoginActivity.this, MobileVerificationActivity.class);
                 startActivity(i);
-
-                // close this activity
-                finish();
             }
         });
 

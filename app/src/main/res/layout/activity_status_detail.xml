@@ -1,43 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#efefef"
-    tools:context="vendor.greasemonkey.drabstech.com.greasemonkeyvendor.request_detail.RequestDetailActivity">
+    tools:context="vendor.greasemonkey.drabstech.com.greasemonkeyvendor.servicing_request.RequestStatusActivity">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"/>
 
-
-    <!--<fragment
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"/>-->
-
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_margin="10dp"
-        card_view:cardBackgroundColor="@color/whiteText"
-        card_view:cardCornerRadius="4dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Google Map"
-            android:textColor="#000"
-            android:textSize="35sp"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"/>
-
-    </android.support.v7.widget.CardView>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -45,8 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-
 
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -332,89 +304,34 @@
                             android:textSize="12sp"/>
                     </LinearLayout>
 
-                    <LinearLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Request Status"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#000"/>
+
+                    <Spinner
+                        android:id="@+id/spinner1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:entries="@array/request_status"/>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:paddingLeft="10dp"
-                            android:paddingBottom="10dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Select Estimate Delivery Date"
-                                android:textColor="#bdbdbd"
-                                android:textSize="12sp"
-                                android:layout_marginTop="10dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="10 SEP 2019"
-                                android:textColor="#000"
-                                android:textSize="12sp"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Select Estimate Delivery Time"
-                                android:textColor="#bdbdbd"
-                                android:layout_marginTop="10dp"
-                                android:textSize="12sp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="03:30 PM"
-                                android:textColor="#000"
-                                android:textSize="12sp"/>
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <Button
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/whiteText"
-                            android:layout_margin="10dp"
-                            android:background="#45992b"
-                            android:text="Accept"/>
-
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="#d72f2f"
-                            android:textColor="@color/whiteText"
-                            android:text="Reject"/>
-
-                    </LinearLayout>
+                        android:textColor="@color/whiteText"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        android:background="#45992b"
+                        android:text="Submit"/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

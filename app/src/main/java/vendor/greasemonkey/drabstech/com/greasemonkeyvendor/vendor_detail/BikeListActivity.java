@@ -12,10 +12,12 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.BaseActivity;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.DashobardActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.HomeActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 
-public class BikeListActivity extends AppCompatActivity implements View.OnClickListener {
+public class BikeListActivity extends BaseActivity implements View.OnClickListener {
 
     private Button button;
     private ListView listView;
@@ -71,11 +73,9 @@ public class BikeListActivity extends AppCompatActivity implements View.OnClickL
             outputStrArr[i] = selectedItems.get(i);
         }
 
-        Intent i = new Intent(BikeListActivity.this,  HomeActivity.class);
+        Intent i = new Intent(BikeListActivity.this,  DashobardActivity.class);
         startActivity(i);
 
-        // close this activity
-        finish();
 
        /* Intent intent = new Intent(getApplicationContext(),
                 ResultActivity.class);

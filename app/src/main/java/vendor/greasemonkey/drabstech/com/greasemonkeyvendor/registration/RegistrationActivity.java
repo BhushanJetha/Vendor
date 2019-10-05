@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.BaseActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.login.LoginActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.mobileVerification.OTPVerificationActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.vendor_detail.RegisterAddressActivity;
 
-public class RegistrationActivity extends AppCompatActivity {
+public class RegistrationActivity extends BaseActivity {
 
     private Button btnRegistration;
 
@@ -26,9 +27,6 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(RegistrationActivity.this, RegisterAddressActivity.class);
                 startActivity(i);
-
-                // close this activity
-                finish();
             }
         });
     }

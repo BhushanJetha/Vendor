@@ -53,7 +53,7 @@
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/garage_name" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/state" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -99,7 +99,7 @@
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/city" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -122,7 +122,7 @@
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/landmark" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -145,7 +145,7 @@
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/address_line" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -168,7 +168,7 @@
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/address_line" />
 
                 <EditText
                     android:layout_width="match_parent"
