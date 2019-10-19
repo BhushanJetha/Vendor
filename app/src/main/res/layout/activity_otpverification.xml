@@ -35,6 +35,7 @@
         android:layout_gravity="center"/>
 
     <EditText
+        android:id="@+id/etOTP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -43,7 +44,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:hint="Enter OTP"
-        android:inputType="text"
+        android:inputType="number"
         android:maxLines="1"/>
 
 

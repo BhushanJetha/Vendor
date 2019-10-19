@@ -6,6 +6,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -15,17 +16,25 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.DashobardActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.HomeActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.R;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.SplashActivity;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.common.Constant;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.comunication.CommunicationChanel;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.comunication.IResponse;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.helpscreen.WelcomeActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.mobileVerification.MobileVerificationActivity;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.mobileVerification.OTPVerificationActivity;
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.registration.RegistrationActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements IResponse {
 
     private EditText etMobileNumber,etPassword;
+    private String strMobileNumber, strPassword;
     private TextView registartionLink, forgotPasswordLink;
     private Button btnLogin;
 
@@ -35,26 +44,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         init();
+        onClick();
 
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(LoginActivity.this, DashobardActivity.class);
-                startActivity(i);
-
-                // close this activity
-                finish();
-            }
-        });
-
-        registartionLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(LoginActivity.this, MobileVerificationActivity.class);
-                startActivity(i);
-            }
-        });
 
         forgotPasswordLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,5 +92,68 @@ public class LoginActivity extends AppCompatActivity {
         registartionLink = (TextView) findViewById(R.id.registrationLink);
         forgotPasswordLink = (TextView) findViewById(R.id.forgotPasswordLink);
         btnLogin = (Button) findViewById(R.id.loginBtn);
+    }
+
+    private void onClick(){
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                try {
+                    JSONObject jsonObject=new JSONObject();
+
+                    strMobileNumber = etMobileNumber.getText().toString();
+                    strPassword = etPassword.getText().toString();
+
+                    if(strMobileNumber.isEmpty()){
+                        Toast.makeText(getApplicationContext(), "Please Register Mobile Number !", Toast.LENGTH_LONG).show();
+                    }else if(strPassword.isEmpty()){
+                        Toast.makeText(getApplicationContext(), "Please Enter Your Password !", Toast.LENGTH_LONG).show();
+                    }else {
+                        jsonObject.put("mobile",strMobileNumber);
+                        jsonObject.put("password",strPassword);
+
+                    Log.d("Json-->",jsonObject.toString());
+                    CommunicationChanel communicationChanel =new CommunicationChanel();
+                    communicationChanel.communicateWithServer(LoginActivity.this,
+                    Constant.POST, Constant.loginAPI,jsonObject,"Login");
+
+                  /*  Intent i = new Intent(LoginActivity.this, DashobardActivity.class);
+                    startActivity(i);
+                    finish();*/
+                }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        registartionLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(LoginActivity.this, MobileVerificationActivity.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    @Override
+    public void onRequestComplete(JSONObject jsonObject, String entity) {
+        try {
+
+            String response = jsonObject.getString("message");
+            Log.d("Response ##-->",response);
+            if(response.equals("Vendor Not Found.")){
+               Toast.makeText(getApplicationContext(),"Please register first!",Toast.LENGTH_LONG).show();
+            }else {
+                Intent i = new Intent(LoginActivity.this, DashobardActivity.class);
+                startActivity(i);
+                finish();
+            }
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
     }
 }

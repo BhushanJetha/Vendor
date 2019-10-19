@@ -3,7 +3,8 @@
     <color name="colorPrimary">#f58a0b</color>
     <color name="colorPrimaryDark">#f89520</color>
     <color name="colorAccent">#29abe2</color>
-
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
 
     <color name="bgBottomNavigation">#fff</color>
     <color name="colorPrimaryText">#f0b71c</color>
@@ -38,4 +39,6 @@
         <item>@color/dot_dark_screen2</item>
         <item>@color/dot_dark_screen3</item>
     </array>
+
+
 </resources>

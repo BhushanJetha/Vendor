@@ -2,10 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="vendor.greasemonkey.drabstech.com.greasemonkeyvendor">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.    READ_GSERVICES" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <!-- Google MAP API key -->
 
@@ -20,7 +25,8 @@
         android:roundIcon="@drawable/launch_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,21 +36,30 @@
         <activity
             android:name=".helpscreen.WelcomeActivity"
             android:label="@string/title_activity_welcome" />
-        <activity android:name=".login.LoginActivity" />
-        <activity android:name=".registration.RegistrationActivity" />
-        <activity android:name=".mobileVerification.OTPVerificationActivity" />
+        <activity android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".registration.RegistrationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mobileVerification.OTPVerificationActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".HomeActivity" />
-        <activity android:name=".vendor_detail.RegisterAddressActivity" />
-        <activity android:name=".vendor_detail.ServiceDetailActivity" />
-        <activity android:name=".vendor_detail.BikeListActivity" />
-        <activity android:name=".servicing_request.RequestStatusActivity" />
-        <activity android:name=".mobileVerification.MobileVerificationActivity" />
-        <activity android:name=".request_detail.RequestDetailActivity" />
+        <activity android:name=".vendor_detail.RegisterAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".vendor_detail.ServiceDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".vendor_detail.BikeListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".servicing_request.RequestStatusActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".mobileVerification.MobileVerificationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".request_detail.RequestDetailActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".DashobardActivity" />
         <activity
             android:name=".BaseActivity"
             android:label="@string/title_activity_base"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

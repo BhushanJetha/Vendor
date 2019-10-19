@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.helpscreen.WelcomeActivity;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.login.LoginActivity;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.vendor_detail.BikeListActivity;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.vendor_detail.RegisterAddressActivity;
+import vendor.greasemonkey.drabstech.com.greasemonkeyvendor.vendor_detail.ServiceDetailActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -28,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(SplashActivity.this, WelcomeActivity.class);
+                Intent i = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(i);
 
                 // close this activity
